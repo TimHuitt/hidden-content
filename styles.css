@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cinzel:wght@500&display=swap');
+
+body {
+  overflow: hidden;
+}
+.main-content {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  overflow: hidden;
+}
+.main-content img {
+  width: auto;
+  height: 100%;
+  filter: brightness(100%);
+}
+
+.light-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+.top-hover {
+  background: radial-gradient(circle at top, transparent 30%, black 50%);
+}
+.right-hover {
+  background: radial-gradient(circle at right, transparent 20%, black 50%);
+}
+.bottom-hover {
+  background: radial-gradient(circle at bottom, transparent 20%, black 50%);
+}
+.left-hover {
+  background: radial-gradient(circle at left, transparent 20%, black 50%);
+}
+.top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 101%;
+  height: 51%;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background: transparent;
+  transform: translate(-50%, 0);
+}
+.right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  transform: translate(0, -50%);
+}
+.bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 101%;
+  height: 51%;
+  background: transparent;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  transform: translate(-50%, 0);
+}
+.left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  transform: translate(0,-50%);
+}
+.box {
+  pointer-events: auto;
+}
+.content {
+  padding: 0 10px;
+  font-family: 'Cinzel', serif;
+  
+  overflow-y: scroll;
+  -webkit-user-select: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.top-box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 60%;
+  height: 40%;
+  color: white;
+  text-align: center;
+  background: transparent;
+  transform: translateX(-50%);
+  transition: .5s ease;
+}
+.top-content-hover {
+  height: 40%;
+}
+.right-box {
+  position: absolute;
+  top: 50%;
+  right: -40%;
+  width: 40%;
+  height: 60%;
+  color: white;
+  text-align: center;
+  background: transparent;
+  transform: translateY(-50%);
+  transition: .5s ease;
+}
+.right-content-hover {
+  right: 0;
+}
+.bottom-box {
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  width: 60%;
+  height: 45%;
+  color: white;
+  text-align: center;
+  background: transparent;
+  transform: translateX(-50%);
+  transition: .5s ease;
+}
+.bottom-content-hover {
+  bottom: 0;
+}
+.left-box {
+  position: absolute;
+  top: 50%;
+  left: -40%;
+  width: 40%;
+  height: 40%;
+  color: white;
+  text-align: center;
+  background: transparent;
+  transform: translateY(-50%);
+  transition: .5s ease;
+}
+.left-content-hover {
+  left: 0;
+}
+.to-top {
+  z-index: 2;
+}
+.box::-webkit-scrollbar {
+  display: none;
+}
+
+
+@media (max-width: 500px) {
+  .right-box {
+    width: 60%;
+    right: -100%;
+  }
+  .right-content-hover {
+    right: 0;
+  }
+  .bottom-box {
+    width: 65%;
+    height: 65%;
+    bottom: -100%;
+  }
+  .bottom-content-hover {
+    bottom: 0;
+  }
+  .left-box {
+    width: 60%;
+  }
+  .left-box {
+    width: 60%;
+    left: -100%;
+  }
+  .left-content-hover {
+    left: 0;
+  }
+}
+@media (min-width: 1000px) {
+  .main-content img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-height: 500px) {
+  .main-content img {
+    width: 100%;
+    height: auto;
+  }
+}
